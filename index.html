@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Liga - Jardins de Teià</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Estilos para los botones */
+    .pdf-list a {
+      display: inline-block;
+      padding: 8px 16px; /* Ajusta el espaciado interno de los botones */
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .pdf-list a:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Padel Liga - Jardins de Teià</h1>
+
+    <ul class="pdf-list">
+      <li><a href="Reglamento.pdf" target="_blank">Reglamento</a></li>
+      <li><a href="#" onclick="solicitarContraseña()">Listado Telefónico</a></li>
+      <li><a href="Jornada.pdf" target="_blank">Jornada Actual</a></li>
+    </ul>
+
+    <div id="contraseña" style="display: none;">
+      <input type="password" id="inputContraseña">
+      <button onclick="verificarContraseña()">Ingresar</button>
+    </div>
+  </div>
+
+  <script>
+    function solicitarContraseña() {
+      var contraseñaCorrecta = 'habitat'; // Contraseña de ejemplo (no segura)
+      var contraseñaIngresada = prompt('Por favor, ingresa la contraseña para acceder al Listado Telefónico:');
+      if (contraseñaIngresada === contraseñaCorrecta) {
+        alert('Contraseña correcta. Acceso permitido al Listado Telefónico.');
+        window.location.href = 'Jugadores.pdf'; // Redirige al documento Jugadores.pdf
+      } else if (contraseñaIngresada !== null) {
+        alert('Contraseña incorrecta. Inténtalo de nuevo.');
+      }
+    }
+  </script>
+
+</body>
+</html>

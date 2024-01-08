@@ -1,0 +1,67 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('tu_imagen_de_fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* Estilos para el título */
+h1 {
+  font-size: 28px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Estilos para la lista de enlaces */
+.pdf-list {
+  list-style: none;
+  padding: 0;
+}
+
+.pdf-list li {
+  margin-bottom: 8px;
+}
+
+.pdf-list a {
+  display: block;
+  padding: 8px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.pdf-list a:hover {
+  background-color: #2980b9;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+
+  .pdf-list a {
+    padding: 6px;
+  }
+}
